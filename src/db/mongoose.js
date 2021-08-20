@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 const validator = require('validator')
 
 
-mongoose.connect('mongodb+srv://ansharora:vardy3999@cluster0.5og1b.mongodb.net/task-app?retryWrites=true&w=majority',{
+
+mongoose.connect(process.env.MONGODB_URL,{
     useNewUrlParser : true,
     useCreateIndex : true,
     useFindAndModify : false
